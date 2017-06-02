@@ -17,6 +17,13 @@ intuitively understand, monitor, and control your containerized, microservices b
   backend/Dockerfile
   Makefile
 - ./scope launch 
+### go 语言
+- go 语言是可以编译成可执行文件的，可以在不安装go环境的机器上执行
+- gopm 是国内的管理go依赖的仓库，类似nodejs 的cnpm
+- go 命令
+  go build 
+  go install
+  go get = git clone + go install （有时候需要明确执行go install 不知道为什么）
 
 ### Understand your Docker containers in real-time
 
