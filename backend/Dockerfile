@@ -11,7 +11,8 @@ RUN go clean -i net && \
 RUN curl -fsSL -o shfmt https://github.com/mvdan/sh/releases/download/v1.3.0/shfmt_v1.3.0_linux_amd64 && \
     chmod +x shfmt && \
     mv shfmt /usr/bin
-RUN go get -tags netgo \
+RUN go get -u github.com/gpmgo/gopm 
+RUN gopm get -tags netgo \
 		github.com/fzipp/gocyclo \
 		github.com/golang/lint/golint \
 		github.com/kisielk/errcheck \
