@@ -1,3 +1,17 @@
+# 解决复制限制
+node_modules/xterm/lib/SelectionManager.js
+- 51:this._rowContainer.addEventListener('mousedown', function (event) { return _this._onMouseDown(event); });
+node_modules/xterm/lib/xterm.js
+- 330
+```
+on(this.element, 'contextmenu', function (event) {
+  Clipboard_1.rightClickHandler(event, _this.textarea, _this.selectionManager);
+});
+```
+app/html/index.html
+- 13 
+add copy and paste manual
+
 # Scope UI
 
 ## Getting Started (using local node)
