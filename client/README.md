@@ -8,6 +8,15 @@ on(this.element, 'contextmenu', function (event) {
   Clipboard_1.rightClickHandler(event, _this.textarea, _this.selectionManager);
 });
 ```
+- 所有mousedown事件删除
+node_modules/xterm/lib/xterm.css
+- 44
+```
+.term
+/*user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*-webkit-user-select: none;*/
+```
 app/html/index.html
 - 13 
 add copy and paste manual
