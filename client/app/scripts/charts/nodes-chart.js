@@ -208,7 +208,7 @@ class NodesChart extends React.Component {
 
   parseHash() {
     try {
-      let hash = window.location.hash;
+      let hash = decodeURI(window.location.hash);
       hash = hash.substring(hash.lastIndexOf('/') + 1);
       const end = hash.indexOf('?');
       if (end !== -1) {
@@ -222,7 +222,7 @@ class NodesChart extends React.Component {
   }
 
   replaceHash(obj) {
-    let hash = window.location.hash;
+    let hash = decodeURI(window.location.hash);
     const start = hash.substring(0, hash.lastIndexOf('/') + 1);
     let end = hash.indexOf('?');
     if (end !== -1) {
